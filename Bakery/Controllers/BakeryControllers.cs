@@ -18,7 +18,7 @@ namespace Bakery.Controllers
     {
       return View();
     }
-    [HttpPost("/bakery")]
+  [HttpPost("/bakery")]
     public ActionResult Create(string name, string description)
     {
       VendorList newVendorList = new VendorList(name, description);
@@ -26,4 +26,29 @@ namespace Bakery.Controllers
     }
 
 }
+
+public class OrderListController : Controller
+  {
+    [HttpGet("/bakery/order")]
+    public ActionResult Index()
+    {
+      List<OrderList> newOrderList = OrderList.GetAll();
+      return View(newOrderList);
+    }
+  
+  [HttpGet("/bakery/order/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+  [HttpPost("/bakery/order")]
+    public ActionResult Create(string title, string description, int price, string date)
+    {
+      OrderList newOrderList2 = new OrderList(title, description, price, date);
+      return RedirectToAction("Index");
+    }
+
+}
+
+
 }
