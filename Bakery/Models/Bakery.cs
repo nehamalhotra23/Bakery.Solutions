@@ -51,8 +51,7 @@ namespace Bakery.Models
       Date = date;
       instances.Add(this);
     }
-
-     public static void ClearAll()
+    public static void ClearAll()
     {
       instances.Clear();
     }

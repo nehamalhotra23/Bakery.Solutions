@@ -2,5 +2,8 @@ a {
     style: none;
 }
 .main {
- margin-left: 60;
+ margin-left: 60px;
+}
+form {
+ margin-top: 60px;
 }

@@ -32,21 +32,20 @@ namespace Bakery.Controllers
       VendorList newVendor = VendorList.Show(intID);
       return View(newVendor);
     }
-  [HttpGet("/bakery/{Id}/orders/new")]
-  public ActionResult NewOrder()
-  {
+    [HttpGet("/bakery/{Id}/orders/new")]
+    public ActionResult NewOrder()
+    {
      List<Order> newOrder = Order.GetAll();
      return View(newOrder);
     
-  }
-  [HttpPost("/bakery/{Id}/orders/new")]
-  public ActionResult Create(string title, string description, int price, string date)
-  {
+    }
+    [HttpPost("/bakery/{Id}/orders/new")]
+    public ActionResult Create(string title, string description, int price, string date)
+    {
     Order newOrder = new Order(title, description, price, date);
     return RedirectToAction("Index");
+    }
   }
-
- }
  
 }
 
