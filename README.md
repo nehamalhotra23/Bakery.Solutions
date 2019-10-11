@@ -1,4 +1,4 @@
-# _ Bakery's Order Tracker_
+#  Bakery's Order Tracker
 
 #### _Bakery's Order Tracker, 27-8-2019_
 
@@ -13,7 +13,6 @@ _This MVC application allows the user to add list of vendors and Orders placed b
 * _Git Clone https://github.com/nehamalhotra23/Bakery.Solutions.git_
 * _Run "Dotnet Build" in terminal_
 * _Run "Dotnet Run"_
-
 
 ## Known Bugs
 
