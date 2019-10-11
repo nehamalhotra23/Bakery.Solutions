@@ -4,13 +4,14 @@
 
 
 <h1>List Of Vendors</h1>
-<ul>
+<ol>
     @foreach (VendorList name in Model)
     {
-      <li><a href = '/bakery/{id}/orders/new'>@name.Name</a></li>
-      <a href = '/bakery/{id}/orders/new'>@name.Description</a>
+      <li><a href = '/bakery/{Id}/orders/new'>@name.Name</a></li>
+      <a href ='/bakery/{Id}/orders/new'>@name.Description</a>
+
 
     }
-  </ul>
+  </ol>
   
   <li><a href="/bakery/new">Add a new Vendor.</a></li>

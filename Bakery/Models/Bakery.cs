@@ -4,12 +4,11 @@ namespace Bakery.Models
 {
     public class VendorList
     {
-        
         public string Name { get; set; }
         public string Description { get; set; }
         public int Id { get; }
         private static List<VendorList> _instances = new List<VendorList> {};
-        
+          
 
     public VendorList (string name, string description)
     {
@@ -17,7 +16,7 @@ namespace Bakery.Models
         Description = description;
         _instances.Add(this);
         Id = _instances.Count;
-       
+        
     }
 
     public static void ClearAll()
@@ -29,14 +28,14 @@ namespace Bakery.Models
     {
       return _instances;
     }
-     public static VendorList Show(int search)
-        {
-            return _instances[search - 1];
-        }
-
+    public static VendorList Show(int search)
+    {
+      return _instances[search - 1];
     }
 
-     public class Order
+}
+
+    public class Order
     {
       public string Title { get; set; }
       public string Description { get; set; }
@@ -62,9 +61,8 @@ namespace Bakery.Models
     {
       return instances;
     }
-    }
-
-    }
+  }
+}
 
     
 

@@ -1,20 +1,23 @@
 @using Bakery.Models;
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+<link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css" />
+
 <form action="/bakery/{id}/orders/new" method="post">
   <label for="title">Add a new title</label>
   <input id="title" name="title" type="text">
-  <br>
+  
   <label for="description">Add the description</label>
   <input id="description" name="description" type="text">
-  <br>
+  
   <label for="price">Add the price</label>
   <input id="price" name="price" type="text">
-  <br>
+  
   <label for="date">Add the date</label>
   <input id="date" name="date" type="text">
 
-  <button type="submit">Submit</button>
+  <button class="btn btn-primary" type="submit">Submit</button>
 
 @foreach (Order name in Model)
     {
-    <ul><li>@name.Title<br> @name.Description <br> @name.Price <br> @name.Date</li></ul>
+    <ol><li>@name.Title<br> @name.Description <br> @name.Price <br> @name.Date</li></ol>
     }
