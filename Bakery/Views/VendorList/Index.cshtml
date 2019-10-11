@@ -7,8 +7,16 @@
 <ul>
     @foreach (VendorList name in Model)
     {
-      <li><a href='bakery/orders'>@name.Name</a></li>
+      <li><a href='/bakery/orders'>@name.Name</a></li>
+      <li>@name.Id</li>
     }
   </ul>
+
+  <form action="/vendorList/{id}">
+  <label for="vendorListID">Search a vendor</label>
+  <input id="vendorListID" name="vendorListID" type="text">
+  <button type="submit">Submit</button>
+</form>
+
   
   <li><a href="/bakery/new">Add a new Vendor.</a></li>

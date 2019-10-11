@@ -25,10 +25,8 @@ namespace Bakery.Controllers
       return RedirectToAction("Index");
     }
 
-    public class OrderController : Controller
-  {
-    [HttpGet("/bakery/order")]
-    public ActionResult Index()
+    [HttpGet("/vendorList/{id}")]
+    public ActionResult Show(string vendorsListID)
     {
       List<Order> allOrders = Order.GetAll();
       return View(allOrders);
@@ -48,7 +46,7 @@ namespace Bakery.Controllers
 
 }
 
-}
+
 }
 
 
