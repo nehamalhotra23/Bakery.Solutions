@@ -13,4 +13,13 @@ namespace Bakery.Controllers
       return View(newList);
     }
   }
+  public class OrderListController : Controller
+  {
+    [HttpGet("/bakery")]
+    public ActionResult Index()
+    {
+      List<OrderList> newListOrder = OrderList.GetAll();
+      return View(newListOrder);
+    }
+  }
 }
