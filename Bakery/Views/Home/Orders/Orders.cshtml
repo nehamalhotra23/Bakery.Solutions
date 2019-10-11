@@ -7,9 +7,9 @@
   <h3>No Orders have been added yet!</h3>
 } 
 
-@foreach (Orders order in Model)
+@foreach (Order orders in Model)
 {
-  <h3><a href='/Orders>@category.Name</a></h3>
+  <h3><a href='/Orders'>@orders.Title</a></h3>
 }
 
 <p><a href='/'>Back home</a></p>

@@ -10,9 +10,20 @@ namespace Bakery.Controllers
     [HttpGet("/orders")]
     public ActionResult Index()
     {
-      List<Orders> allOrders = Orders.GetAll();
+      List<Order> allOrders = Order.GetAll();
       return View(allOrders);
     }
+[HttpGet("/orders/new")]
+  public ActionResult  New()
+  {
+    return View();
+  }
+  [HttpPost("/orders")]
+  public ActionResult Create(string title, string description, int price, string date)
+  {
+    Order newOrder = new Order(title, description, price, date);
+    return RedirectToAction("Index");
+  }
 
   }
 }
