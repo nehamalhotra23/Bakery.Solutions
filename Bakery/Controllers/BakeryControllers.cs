@@ -25,16 +25,16 @@ namespace Bakery.Controllers
       return RedirectToAction("Index");
     }
 
-     public class OrdersController : Controller
+    public class OrderController : Controller
   {
-    [HttpGet("/orders")]
+    [HttpGet("/bakery/order")]
     public ActionResult Index()
     {
       List<Order> allOrders = Order.GetAll();
       return View(allOrders);
     }
-[HttpGet("/bakery/orders/new")]
-  public ActionResult  New()
+  [HttpGet("/bakery/orders/new")]
+  public ActionResult New()
   {
     return View();
   }
@@ -42,7 +42,7 @@ namespace Bakery.Controllers
   public ActionResult Create(string title, string description, int price, string date)
   {
     Order newOrder = new Order(title, description, price, date);
-    return RedirectToAction("Index");
+    return RedirectToAction("Show");
   }
 
 

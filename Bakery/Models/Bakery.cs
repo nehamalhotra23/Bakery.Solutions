@@ -7,8 +7,6 @@ namespace Bakery.Models
         private static List<VendorList> _instances = new List<VendorList> {};
         public string Name { get; set; }
         public string Description { get; set; }
-
-        public List<Order> Orders { get; set; }
         
 
     public VendorList (string name, string description)
@@ -16,18 +14,8 @@ namespace Bakery.Models
         Name = name;
         Description = description;
         _instances.Add(this);
-        Orders = new List<Order>{};
+       
     }
-     
-    public VendorList(string order)
-    {
-
-      Orders = new List<Order>{};
-    }
-    public void AddOrder(Order order)
-  {
-    Orders.Add(order);
-  }
 
     public static void ClearAll()
     {
