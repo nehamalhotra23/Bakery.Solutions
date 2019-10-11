@@ -7,11 +7,9 @@
 <ol>
     @foreach (VendorList name in Model)
     {
-      <li><a href = '/bakery/{Id}/orders/new'>@name.Name</a></li>
-      <a href ='/bakery/{Id}/orders/new'>@name.Description</a>
-
-
+      <h2><li><a href = '/bakery/{Id}/orders/new'>@name.Name</a></li></h2>
+       <h5>Description: <a href ='/bakery/{Id}/orders/new'>@name.Description</a></h5>
     }
   </ol>
   
-  <li><a href="/bakery/new">Add a new Vendor.</a></li>
+  <h3><a href="/bakery/new">Add a new Vendor.</a></h3>
