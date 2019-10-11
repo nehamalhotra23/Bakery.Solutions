@@ -1,0 +1,16 @@
+@using Bakery.Models;
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+<link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css" />
+
+
+<h1>List Of Vendors</h1>
+<ul>
+    @foreach (VendorList name in Model)
+    {
+      <li>@name.Name</li>
+      <li>@name.Description</li>
+      
+    }
+  </ul>
+  
+  <li><a href="/bakery/new">Add a new Vendor.</a></li>

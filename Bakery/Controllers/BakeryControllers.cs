@@ -12,14 +12,18 @@ namespace Bakery.Controllers
       List<VendorList> newList = VendorList.GetAll();
       return View(newList);
     }
-  }
-  public class OrderListController : Controller
-  {
-    [HttpGet("/bakery")]
-    public ActionResult Index()
+  
+  [HttpGet("/bakery/new")]
+    public ActionResult New()
     {
-      List<OrderList> newListOrder = OrderList.GetAll();
-      return View(newListOrder);
+      return View();
     }
-  }
+    [HttpPost("/bakery")]
+    public ActionResult Create(string name, string description)
+    {
+      VendorList newVendorList = new VendorList(name, description);
+      return RedirectToAction("Index");
+    }
+
+}
 }
