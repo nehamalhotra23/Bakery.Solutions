@@ -25,22 +25,25 @@ namespace Bakery.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpGet("/vendorList/{id}")]
-    public ActionResult Show(string vendorsListID)
+    [HttpGet("/bakery/{id}")]
+    public ActionResult Show(string vendorListID)
     {
-      List<Order> allOrders = Order.GetAll();
-      return View(allOrders);
+      int intID = int.Parse(vendorListID);
+      VendorList newVendor = VendorList.Show(intID);
+      return View(newVendor);
     }
-  [HttpGet("/bakery/orders/new")]
-  public ActionResult New()
+  [HttpGet("/bakery/{id}/orders/new")]
+  public ActionResult NewOrder()
   {
-    return View();
+     List<Order> newOrder = Order.GetAll();
+     return View(newOrder);
+    
   }
-  [HttpPost("/bakery/orders")]
+  [HttpPost("/bakery/{id}/orders/new")]
   public ActionResult Create(string title, string description, int price, string date)
   {
     Order newOrder = new Order(title, description, price, date);
-    return RedirectToAction("Show");
+    return RedirectToAction("Index");
   }
 
 

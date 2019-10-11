@@ -4,10 +4,12 @@
 
 
 <h1>Orders</h1>
+<h2>@Model.Name</h2>
 <ul>
-@foreach (Order name in Model)
-{
- <li>@name.Title</li>
-}
+<li><h3>Description of order: @Model.Description</h3></li>
 </ul>
+
+<a href='/bakery/new'>Add</a>
+<a href='/bakery'>View List</a>
+<a href = '/bakery/{id}/orders/new'>Create a new order for this vendor.</a>
 <p><a href='/'>Back home</a></p>
