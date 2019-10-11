@@ -25,8 +25,30 @@ namespace Bakery.Controllers
       return RedirectToAction("Index");
     }
 
+     public class OrdersController : Controller
+  {
+    [HttpGet("/orders")]
+    public ActionResult Index()
+    {
+      List<Order> allOrders = Order.GetAll();
+      return View(allOrders);
+    }
+[HttpGet("/bakery/orders/new")]
+  public ActionResult  New()
+  {
+    return View();
+  }
+  [HttpPost("/bakery/orders")]
+  public ActionResult Create(string title, string description, int price, string date)
+  {
+    Order newOrder = new Order(title, description, price, date);
+    return RedirectToAction("Index");
+  }
+
+
 }
 
+}
 }
 
 
