@@ -6,13 +6,16 @@
 <link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css"/>
 </head>
 <body>
+  <div class="container"> 
 <h1>Add a Vendor</h1>
-<form class="form" action="/bakery"  method="post">
+<form class="form" action="/vendor"  method="post">
   <label for="name">Add Name of the vendor</label>
   <input id="name" name="name" type="text">
   <label for="description">Add Description of Vendor</label>
   <input id="description" name="description" type="text">
-<button class="btn btn-primary" type="submit">Submit</button>
+  <button class="btn btn-primary" type="submit">Submit</button>
 </form>
+<h2><a href="/">Return Home</a><a href="/vendors">Return to vendors</a></h2>
+</div>
 </body>
 </html>

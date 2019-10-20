@@ -1,0 +1,21 @@
+@using Bakery.Models;
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+<link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css" />
+<div class="container">
+<h1>List Of Orders</h1> 
+<h3>Vendor Name: @Model["vendor"].Name</h3>
+<h3>Description: @Model["vendor"].Description</h3>
+<ul>
+@foreach (Order order in @Model["order"])
+  {
+    <li><h3>Order Title:</h3> @order.Title<hr></li>
+    <li><h3>Order Description:</h3> @order.Description<hr></li>
+    <li><h3>Order Price:</h3> @order.Price<hr></li>
+    <li><h3>Order Date:</h3> @order.Date<hr></li>
+  }
+</ul>
+<h2><a href='/vendor/@Model["vendor"].Id/order/new'>Add an order</a></h2>
+<h3><a href="/vendor/new">Add a new Vendor.</a></h3>
+<p><a href="/"><button class="btn btn-primary">Back To Home</button></a></p>
+</div>
+  
