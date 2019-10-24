@@ -1,13 +1,16 @@
+@{
+  Layout = "_Layout";
+}
 @using Bakery.Models;
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
-<link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css" />
+<div class="container">
 <h1>List Of Vendors</h1>
-<ol>
-  @foreach (Vendor vendor in Model)
+<h3>To see the orders, click on Vendor's name</h3>
+ @foreach (Vendor vendor in Model)
   {
     <h2><li><a href = "/vendor/@vendor.Id">@vendor.Name</a></li></h2>
     <h5>Description: @vendor.Description </h5>
   }
-</ol>
 <p><a href="/"><button class="btn btn-primary">Back To Home</button></a></p>
+<h1><button><a href='/vendor/new'>Add a Vendor</a></h1></button>
+</div>
   

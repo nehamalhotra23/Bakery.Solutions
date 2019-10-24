@@ -1,21 +1,23 @@
+@{
+  Layout = "_Layout";
+}
 @using Bakery.Models;
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
-<link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css" />
+
 <div class="container">
 <h1>Add a Order</h1>
 <form action="/vendor/@Model.Id/order" method="post">
  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="title">Add a new title</label>
-  <input id="title" name="title" type="text">
+  <input id="title" name="title" type="text" required>
   <hr>
   <label for="description">Add the description</label>
-  <input id="description" name="description" type="text">
+  <input id="description" name="description" type="text" required>
   <hr>
   <label for="price">Add the price</label>
-  <input id="price" name="price" type="text">
+  <input id="price" name="price" type="text" required>
   <hr>
   <label for="date">Add the date</label>
-  <input id="date" name="date" type="text">
+  <input id="date" name="date" type="text" required>
    <hr>
   <button class="btn btn-primary" type="submit">Submit</button>
   </form>
