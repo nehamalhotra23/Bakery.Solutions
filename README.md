@@ -10,6 +10,7 @@ _This MVC application allows the user to add list of vendors and Orders placed b
 
 ## Setup/Installation Requirements
 
+* _To View the Live site go to https://nehamalhotra23.github.io/Bakery.Solutions/_
 * _Git Clone https://github.com/nehamalhotra23/Bakery.Solutions.git_
 * _Run "Dotnet Build" in terminal_
 * _Run "Dotnet Run"_
