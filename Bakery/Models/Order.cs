@@ -36,7 +36,5 @@ namespace Bakery.Models
         {
             return _instances[id - 1];
         }
-        
-
     }
 }
